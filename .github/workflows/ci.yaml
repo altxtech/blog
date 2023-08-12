@@ -31,4 +31,7 @@ jobs:
       run: hugo --minify
 
     - name: Deploy
+      env:
+        AZURE_STORAGE_ACCOUNT: ${{ env.AZURE_STORAGE_ACCOUNT }}
+        AZURE_STORAGE_KEY: ${{ env.AZURE_STORAGE_KEY }}
       run: hugo deploy
