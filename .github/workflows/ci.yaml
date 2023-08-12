@@ -20,9 +20,6 @@ jobs:
       uses: azure/login@v1
       with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-      
-    - name: Download azure CLI
-      uses: azure/CLI@v1
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
