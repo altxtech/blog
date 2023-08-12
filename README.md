@@ -1,0 +1,3 @@
+# About
+This repo is for my upcoming personal webpage.
+Currently under construction...
