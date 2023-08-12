@@ -1,0 +1,12 @@
+baseURL = 'https://altx-tech.net'
+languageCode = 'en-us'
+title = 'Altx Blog!'
+theme = 'holy'
+
+[deployment]
+order = [".jpg$", ".gif$"]
+
+[[deployment.targets]]
+name = "dev"
+# Deployed to azure
+URL = "azblob://$web"
