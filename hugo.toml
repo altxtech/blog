@@ -1,7 +1,7 @@
 baseURL = 'https://altx-tech.net'
 languageCode = 'en-us'
 title = 'Altx Blog!'
-theme = 'toigian'
+theme = 'hugo-toigian'
 
 [deployment]
 order = [".jpg$", ".gif$"]
