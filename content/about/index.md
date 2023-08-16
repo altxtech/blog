@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2023-08-13T16:32:31-03:00
-draft: true
+draft: false
 ---
 Hello, my name is Andre  
 
