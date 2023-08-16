@@ -1,7 +1,8 @@
 baseURL = 'https://blog.altxtech.net'
 languageCode = 'en-us'
-title = 'Altx Blog!'
+title = 'Altx Blog!!'
 theme = 'archie'
+copyright = 'Hello'
 
 [params]
 	mode="toggle" # color-mode → light,dark,toggle or auto
@@ -46,3 +47,4 @@ weight = 3
 name = "Tags"
 url = "/tags"
 weight = 4
+
