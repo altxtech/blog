@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Altx Blog!!</title>
+    <title>Posts on Altx Blog!</title>
     <link>https://blog.altxtech.net/posts/</link>
-    <description>Recent content in Posts on Altx Blog!!</description>
+    <description>Recent content in Posts on Altx Blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Hello</copyright>
     <lastBuildDate>Sun, 13 Aug 2023 11:38:16 -0300</lastBuildDate><atom:link href="https://blog.altxtech.net/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First Post</title>
