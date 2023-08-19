@@ -1,0 +1,63 @@
+defaultMarkdownHandler = 'goldmark'
+[asciidocExt]
+	backend = 'html5'
+	extensions = []
+	failureLevel = 'fatal'
+	noHeaderOrFooter = true
+	preserveTOC = false
+	safeMode = 'unsafe'
+	sectionNumbers = false
+	trace = false
+	verbose = false
+	workingFolderCurrent = false
+[asciidocExt.attributes]
+[goldmark]
+	[goldmark.extensions]
+		definitionList = true
+		footnote = true
+		linkify = true
+		linkifyProtocol = 'https'
+		strikethrough = true
+		table = true
+		taskList = true
+		[goldmark.extensions.typographer]
+			apostrophe = '&rsquo;'
+			disable = false
+			ellipsis = '&hellip;'
+			emDash = '&mdash;'
+			enDash = '&ndash;'
+			leftAngleQuote = '&laquo;'
+			leftDoubleQuote = '&ldquo;'
+			leftSingleQuote = '&lsquo;'
+			rightAngleQuote = '&raquo;'
+			rightDoubleQuote = '&rdquo;'
+			rightSingleQuote = '&rsquo;'
+	[goldmark.parser]
+		autoHeadingID = true
+		autoHeadingIDType = 'github'
+		wrapStandAloneImageWithinParagraph = true
+		  [goldmark.parser.attribute]
+			block = false
+			title = true
+	[goldmark.renderer]
+	  hardWraps = false
+	  unsafe = true
+	  xhtml = false
+[highlight]
+anchorLineNos = false
+codeFences = true
+guessSyntax = false
+hl_Lines = ''
+hl_inline = false
+lineAnchors = ''
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = true
+noClasses = true
+noHl = false
+style = 'monokai'
+tabWidth = 4
+[tableOfContents]
+endLevel = 3
+ordered = false
+startLevel = 2
