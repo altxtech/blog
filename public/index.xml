@@ -6,12 +6,14 @@
     <description>Recent content on Altx Blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <managingEditor>andre.soares@altxtech.net (André Luiz Tiago Soares)</managingEditor>
+    <webMaster>andre.soares@altxtech.net (André Luiz Tiago Soares)</webMaster>
     <lastBuildDate>Sun, 13 Aug 2023 11:38:16 -0300</lastBuildDate><atom:link href="https://blog.altxtech.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://blog.altxtech.net/about/</link>
       <pubDate>Sun, 13 Aug 2023 16:32:31 -0300</pubDate>
-      
+      <author>andre.soares@altxtech.net (André Luiz Tiago Soares)</author>
       <guid>https://blog.altxtech.net/about/</guid>
       <description>This line html and shouldn&#39;t render with the current config
 Hello, my name is Andre
@@ -23,7 +25,7 @@ My primary interests are data engineering, data science, cloud, devops and backe
       <title>First Post</title>
       <link>https://blog.altxtech.net/posts/first-post/</link>
       <pubDate>Sun, 13 Aug 2023 11:38:16 -0300</pubDate>
-      
+      <author>andre.soares@altxtech.net (André Luiz Tiago Soares)</author>
       <guid>https://blog.altxtech.net/posts/first-post/</guid>
       <description>First post.
 Cool stuff coming soon&amp;hellip;</description>

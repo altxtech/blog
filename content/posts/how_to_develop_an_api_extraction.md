@@ -1,7 +1,8 @@
 ---
-title: "A Guide to Developing Data Extraction Jobs with python"
-date: 2023-08-25T13:00:00-03:00
+title: "Shorter title"
+date: 2023-08-19:00:00-03:00
 draft: true
+description: Will this fix it?
 ---
 ## Intro
 
