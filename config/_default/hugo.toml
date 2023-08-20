@@ -1,48 +1,5 @@
 baseURL = 'https://blog.altxtech.net'
 languageCode = 'en-us'
 title = 'Altx Blog!'
-theme = 'archie'
-
-[params]
-	mode="toggle" # color-mode → light,dark,toggle or auto
-	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
-	subtitle = "Blog where I write cool stuff"
-	mathjax = true # enable MathJax support
-	katex = true # enable KaTeX support
-
-# Social Tags
-[[params.social]]
-name = "GitHub"
-icon = "github"
-url = "https://github.com/altxtech"
-
-[[params.social]]
-name = "LinkedIn"
-icon = "linkedin"
-url = "https://www.linkedin.com/in/andré-luiz-tiago-soares-689b7314a"
-
-[[params.social]]
-name = "X"
-icon = "x"
-url = "404 lol"
-
-# Main menu Items
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
-
-[[menu.main]]
-name = "All posts"
-url = "/posts"
-weight = 2
-
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 3
-
-[[menu.main]]
-name = "Tags"
-url = "/tags"
-weight = 4
+theme = 'poison'
+enableInlineShortcodes = true
