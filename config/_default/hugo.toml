@@ -1,68 +1,11 @@
 baseURL = "https://blog.altxtech.net"
-DefaultContentLanguage = "en"
 languageCode = "en-us"
-title = "Altx Blog!"
-theme = "lightbi-hugo"
-metaDataFormat = "yaml"
-pygmentsStyle = "trac"
-#pygmentsUseClasses = true
-#pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
-#pygmentsUseClassic = true
-#pygmentOptions = "linenos=inline"
-#disqusShortname = "XXX"
-enableRobotsTXT = true
-enableGitInfo = false
-Paginate = 6
+theme = "hemlock"
+paginate = 10
+pluralizelisttitles = false   # removes the automatically appended "s" on sidebar entries
 
-[sitemap]
-  changefreq = "monthly"
-  priority = 0.5
-  filename = "sitemap.xml"
-
-[Author]
-  name = "André Luiz Tiago Soares"
-  profileImage = "/images/headshot.jpg"
-  website = "https://blog.altxtech.net"
-  email = "andre.soares@altxtech.net"
-  # facebook = "username"
-  # instagram = "username"
-  # youtube = "user/username" # or channel/channelname
-  # twitter = "username"
-  linkedin = "andré-luiz-tiago-soares-689b7314a"
-  github = "altxtech"
-  #gitlab = "username"
-  #bitbucket = "username"
-  #reddit = "username"
-  #xing = "username"
-  #stackoverflow = "users/XXXXXXX/username"
-  #snapchat = "username"
-  #soundcloud = "username"
-  #spotify = "username"
-  #bandcamp = "username"
-  #itchio = "username"
-  #vk = "username"
-  #paypal = "username"
-  #telegram = "username"
-  #500px = "username"
-  #codepen = "username"
-  #mastodon = "url"
-  #kaggle = "username"
-  #weibo = "username"
-  #slack = "username"
-
-[[menu.main]]
-	name = "Posts"
-	url = "/"
-	weight = 1
-
-[[menu.main]]
-    name = "Tags"
-    url = "/tags/blog/"
-    weight = 3
-
-
-[[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 5
+# NOTE: If using Disqus as commenting engine, uncomment and configure this line
+# disqusShortname = "yourDisqusShortname"
+[taxonomies]
+    series = 'series'
+    tags = 'tags'
