@@ -1,5 +1,5 @@
 baseURL = 'https://blog.altxtech.net'
 languageCode = 'en-us'
 title = 'Altx Blog!'
-theme = 'poison'
+theme = 'lightbi-hugo'
 enableInlineShortcodes = true
