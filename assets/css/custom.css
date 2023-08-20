@@ -1,0 +1,13 @@
+.sidebar{
+	line-height: 1.6;
+	font-size: 16px;
+}
+.content {
+	overflow: auto;
+	line-height: 1.6;
+	font-size: 18px;
+}
+.article-toc{
+	line-height: 1.4;
+	font-size: 14px;
+}
