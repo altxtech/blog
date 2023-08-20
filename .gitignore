@@ -1,3 +1,4 @@
 .hugo_build.lock
 .env
 deployment.toml
+public
