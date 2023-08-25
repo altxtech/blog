@@ -1,36 +1,43 @@
 ---
-title: "How to develop API data extraction job with Go"
+title: "Developing API data extraction jobs with Go - The very minimum"
+series: "Developing API data extraction jobs with Go"
+publishDate: 2023-08-28:12:00-03:00
 date: 2023-08-19:00:00-03:00
 draft: true
 ---
 ## Intro
 
-The task is very simple. You want to extract data from and API and load it into something like block storage,
-or a database.  
-On the surface level, it sounds like the type of thing that *should* be simple. And it is... for smaller extraction jobs
-that take a few minutes at most to complete. However, when it comes to larger extraction jobs (hours to complete), and
-making it a resilient, reliable, production-ready solution, it gets suprisingly complicated very fast.
+This post is the first installment of a series on building ETL/ELT jobs to perform full data extraction of API data.  
+The ultimate goal is to explore the main challenges of building this type of application and the main strategies available to solving them.  
 
-### What is this guide  
+All the programming samples will be done with the Go programming language. However, these same strategies will also
+be applicable to all programming languages.
 
-This guide is meant to explore the core issuesa and solution of developing API data extraction jobs or ETL pipelines. 
-These concepts are agnostic to programming languages and will apply to whatever programming language you chosse. However, this guide will use the Go 
-programming language for code examples, and also explore Go features and tricks to deal with API extraction challenges.
+### Parts
+Part 1 - Rate Limiting and State Management  
+Part 2 - Deployment Options (*Coming soon*)
 
-### What makes a data extraction program production ready?
 
-**At a minimum**, for a production environment, a data extraction should achieve at least these 3 things:
-1. **Recover from failures.** For an hours-long job, it is *not viable* to restart it from scratch everytime there is an unforseen edge case exception or a random system outtage. Also, your program should be able to anticipate and handle some basic errors.
-2. **Easy to debug.** On a large enough job, the law of large numbers clearly states that errors are *guaranteed* to happend. There is no going around that, but you should be able to know when and why the extraction failed, and possibly estimate an SLA for the extraction (is it 99% accurate? Or 99.9999%? You should be able to tell).
-3. **Retry failed requests**. If you know which requests failed and why, you should then be able to fix your code and retry those, making your extraction as reliable as possible.  
+### What makes an extraction job production ready?
+
+**At a minimum**, for a production environment, a data extraction job should achieve at least these 3 things:
+1. **State Management**. For an extraction job that will take hours to complete, it is *not viable* having to restart it every 
+time an unexpected crash happens. The program should be able to store information about it's execution state and use it to recover 
+from failures.
+
+2. **Logging and monitoring**. For a large enough amount of data, failures are *guaranteed* to happen. There should be execution logs 
+that facilitate identifying, quantifying and debbugging these failures.
+
+3. **Retrial mechanisms**. Besides just identifying failures, the job should have the capability to retry 
+failed extraction steps.
 
 **Idempotency is desirable, but not required**, which means that running a part of the extraction multiple times will
-have the same end result as running it only once on wherever you're storing your data. In the data world, in practice,
-not having idempotency will mean having duplicate data in your destination. You can handle deduplication downstream, but itis nice having it handled at the extraction step. Besides, making your replicated data a 1-for-1 to the source, opens some
-new alternatives to auditing the result.  
+have the same end result as running it only once on wherever you're storing your data. In the data world, 
+not having idempotency will mean having duplicate data in your destination. You can handle deduplication downstream, but it is 
+nice having it handled at the extraction step.
 
-**Do not worry about performance initially**. It doesn't matter if the extraction takes long as long as it is reliable.  
-Your engineering hours are more valuables than some VM-hours. So, don't feel tempted to mess with asyncio if the
+**Do not worry about performance initially**. In most cases, reliability and resilience are more important than speed.
+Your engineering hours are more valuables than some VM-hours. So, don't feel tempted to mess with async stuff if the
 extraction is feasible without it. Would only be worth it if would save several days of runtime OR if you want to run 
 the job multiple times. 
 
@@ -365,10 +372,95 @@ failures.
 When an extraction job is big enough, failures will happen. They may occur because of unhandled edge cases in the incoming data, unavailability of the 
 infrastructure we're using or simply because the API host server is down.  
 
-Therefore, it's necessary to anticipate and and plan to recover from such failures. The simplest way do this is by implementing *State Mangement*, AKA 
-*Checkpoiting*. Simply put, this about having our program backup information about the current status of execution, that can later be used to resume 
+Therefore, it's necessary to anticipate and and plan for failures. The simplest way do this is by implementing *State Mangement*, AKA 
+*Checkpointing*. Simply put, this is about having our program backup information about the current status of execution that can later be reloaded to resume 
 the execution from where it stopped in the case of a crash.  
 
-Most APIs will use cursors for pagination and, also most of the times, state management can be as simple as storing and loading these cursors.
+In our example, the information we need to save is the `after` cursor and the page number. We can begin by declarying a a `state` type and 
+function to load and save the state to GCS.
 
+> **Important**: We should avoid storing the `next` URL, because that will contain the access_token in the query parameters.
+
+{{< highlight go "linenos=false,hl_lines=8 15-17,linenostart=199" >}}
+type state struct {
+	After string `json:"after"`
+	PageNumber int `json:"page_number"`
+}
+
+func saveStateToGCS(ctx context.Context, bucket *storage.BucketHandle, stateObj state) error {
+    stateJSON, err := json.Marshal(stateObj)
+    if err != nil {
+        return err
+    }
+
+    w := bucket.Object("_state.json").NewWriter(ctx)
+    _, err = w.Write(stateJSON)
+    if err != nil {
+        return err
+    }
+    if err := w.Close(); err != nil {
+        return err
+    }
+    return nil
+}
+
+func loadStateFromGCS(ctx context.Context, bucket *storage.BucketHandle) (state, error) {
+    r, err := bucket.Object("_state.json").NewReader(ctx)
+    if err != nil {
+        return state{}, err
+    }
+    defer r.Close()
+
+    var stateObj state
+    err = json.NewDecoder(r).Decode(&stateObj)
+    if err != nil {
+        return state{}, err
+    }
+    return stateObj, nil
+}
+}
+{{</ highlight >}}
+
+Next, we modify the main function to load the state at the beginning, and save the state to GCS every 100 page. This way, if the execution is interrupted for any reason, we only lose the last 100 pages 
+of extraction runtime instead of potential hours.  
+
+{{< highlight go "linenos=false,hl_lines=8 15-17,linenostart=199" >}}
+func main() {
+
+	// ...Existing code
+
+	// Load state from GCS
+    stateObj, err := loadStateFromGCS(ctx, bucket)
+    if err != nil {
+        fmt.Println("State not found. Starting from scratch.")
+        stateObj = state{ PageNumber: 1, After: ""}
+    } else {
+        fmt.Printf("Resuming extraction from page %d\n", stateObj.PageNumber)
+    }
+
+	// Add the after param if necessary
+	if stateObj.After != "" {
+		params.Set("after", stateObj.After)
+	}
+
+	// ...Existing code
+
+	// Request with pagination
+	for page := stateObj.PageNumber; true; page++{
+
+		// ...Existing code
+
+		// Update and save the state
+		stateObj.PageNumber = page + 1
+		stateObj.After = json_data["paging"].(map[string]interface{})["cursors"].(map[string]interface{})["after"].(string)
+		if page%100 == 0 {
+            if err := saveStateToGCS(ctx, bucket, stateObj); err != nil {
+                log.Println("Error saving state to GCS.")
+            }
+        }
+
+	}
+	fmt.Println("Extraction ended.")
+}
+{{</ highlight >}}
 
