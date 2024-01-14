@@ -1,7 +1,7 @@
 ---
 title: "Developing API data extraction jobs with Go"
-PublishDate: 2023-08-28:12:00-03:00
-date: 2023-08-19:00:00-03:00
+PublishDate: 2023-08-28T12:00-03:00
+date: 2023-08-19T00:00-03:00
 draft: false 
 ---
 ## Intro

@@ -3,9 +3,3 @@ languageCode = "en-us"
 theme = "hemlock"
 paginate = 10
 pluralizelisttitles = false   # removes the automatically appended "s" on sidebar entries
-
-# NOTE: If using Disqus as commenting engine, uncomment and configure this line
-# disqusShortname = "yourDisqusShortname"
-[taxonomies]
-    series = 'series'
-    tags = 'tags'
