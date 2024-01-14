@@ -19,7 +19,7 @@ menu = [
 # Links to your socials.  Comment or delete any you don't need/use. 
 github_url = "https://github.com/altxtech"
 # gitlab_url = "https://gitlab.com"
-linkedin_url = "www.linkedin.com/in/"
+linkedin_url = "https://www.linkedin.com/in/altxtech/"
 # twitter_url = "https://twitter.com"
 # mastodon_url = "https://mastodon.social"
 # tryhackme_url = "https://tryhackme.com"
@@ -29,7 +29,7 @@ linkedin_url = "www.linkedin.com/in/"
 # facebook_url = "https://facebook.com"
 # flickr_url = "https://flickr.com"
 # telegram_url = "https://telegram.org"
-email_url = "andre.soares@altxtech.net"
+email_url = "mailto://andre.soares@altxtech.net"
 
 # NOTE: If you don't want to use RSS, comment or delete the following lines
 # Adds an RSS icon to the end of the socials which links to {{ .Site.BaseURL }}/index.xml
