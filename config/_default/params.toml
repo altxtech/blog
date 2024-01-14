@@ -1,4 +1,4 @@
-brand = "ALTX BLOG!"                      # name of your site - appears in the sidebar
+brand = "ALTX"                      # name of your site - appears in the sidebar
 brand_image = "/images/logo.png"    # path to the image shown in the sidebar
 # description = "A blog about data engineering, cloud, backend development and my opinions on tech" # Used as default meta description if not specified in front matter
 dark_mode = false                      # optional - defaults to false
