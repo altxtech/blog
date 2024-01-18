@@ -314,7 +314,7 @@ func execute_request(req *http.Request) (map[string]interface{}, error) {
 		}
 		
 		// Evaluate and handle the error
-		switch data["error"].(map[string]interface{})["code"].(float64) {
+switch data["error"].(map[string]interface{})["code"].(float64) {
 			// Rate limit error
 			case 17:
 				fmt.Printf("Rate limit exceeded. Backing off by %dms\n", backoffTime)
