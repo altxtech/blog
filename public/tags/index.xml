@@ -5,6 +5,61 @@
     <link>https://blog.altxtech.net/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://blog.altxtech.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Jan 2024 21:27:10 -0300</lastBuildDate><atom:link href="https://blog.altxtech.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud</title>
+      <link>https://blog.altxtech.net/tags/cloud/</link>
+      <pubDate>Wed, 17 Jan 2024 21:27:10 -0300</pubDate>
+      
+      <guid>https://blog.altxtech.net/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Devops</title>
+      <link>https://blog.altxtech.net/tags/devops/</link>
+      <pubDate>Wed, 17 Jan 2024 21:27:10 -0300</pubDate>
+      
+      <guid>https://blog.altxtech.net/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GCP</title>
+      <link>https://blog.altxtech.net/tags/gcp/</link>
+      <pubDate>Wed, 17 Jan 2024 21:27:10 -0300</pubDate>
+      
+      <guid>https://blog.altxtech.net/tags/gcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github Actions</title>
+      <link>https://blog.altxtech.net/tags/github-actions/</link>
+      <pubDate>Wed, 17 Jan 2024 21:27:10 -0300</pubDate>
+      
+      <guid>https://blog.altxtech.net/tags/github-actions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Guide</title>
+      <link>https://blog.altxtech.net/tags/guide/</link>
+      <pubDate>Wed, 17 Jan 2024 21:27:10 -0300</pubDate>
+      
+      <guid>https://blog.altxtech.net/tags/guide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terraform</title>
+      <link>https://blog.altxtech.net/tags/terraform/</link>
+      <pubDate>Wed, 17 Jan 2024 21:27:10 -0300</pubDate>
+      
+      <guid>https://blog.altxtech.net/tags/terraform/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
