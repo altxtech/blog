@@ -1,5 +1,6 @@
 ---
 title: "Deploy to Cloudrun with Terraform and Github Actions"
+description: Guide on how to deploy Cloud Run Apps with Terraform and Github Actions
 date: 2024-01-17T21:27:10-03:00
 publishDate: 2024-01-19T12:00:00-3:00
 draft: false
@@ -7,7 +8,7 @@ author: André Luiz Tiago Soares
 tags: ['Guide', 'Devops', 'Cloud', 'Terraform', 'Github Actions', 'GCP']
 ---
 
-![cover](cover.png)
+![cover](*cover*)
 
 ## Intro
 
