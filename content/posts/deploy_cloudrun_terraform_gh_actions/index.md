@@ -1,6 +1,12 @@
 ---
 title: "Deploy to Cloudrun with Terraform and Github Actions"
-description: Guide on how to deploy Cloud Run Apps with Terraform and Github Actions
+description: >
+  Guide on how to deploy a Cloud Run service using Terraform and Github Actions. On the Terraform part,
+  we go over how we deploy the whole service infrasttrucutre, including an Artifact Registry repository, how
+  to build and push a Docker Image with Terraform and how to deploy the Service with any additional supporting
+  resources. Then we learn how to create a Github Actions workflow to automate the deployment and how to
+  configure WIF for your git repository.
+images: ['*cover*']
 date: 2024-01-17T21:27:10-03:00
 publishDate: 2024-01-19T12:00:00-3:00
 draft: false
