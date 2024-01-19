@@ -3,3 +3,8 @@ languageCode = "en-us"
 theme = "hemlock"
 paginate = 10
 pluralizelisttitles = false   # removes the automatically appended "s" on sidebar entries
+
+[taxonomies]
+	tag = 'tags' # Will use tags for technologies
+	series = 'series'
+

@@ -4,6 +4,7 @@ date: 2024-01-17T21:27:10-03:00
 publishDate: 2024-01-19T12:00:00-3:00
 draft: true
 author: André Luiz Tiago Soares
+tags: ['Guide', 'Devops', 'Cloud', 'Terraform', 'Github Actions', 'GCP']
 ---
 
 ![cover](cover.png)
