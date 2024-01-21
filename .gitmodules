@@ -1,0 +1,3 @@
+[submodule "themes/--force"]
+	path = themes/--force
+	url = git@github.com:altxtech/hemlock.git

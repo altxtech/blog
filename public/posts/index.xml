@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on </title>
-    <link>https://dev.d11nop5myolkvh.amplifyapp.com/posts/</link>
+    <link>https://blog.altxtech.net/posts/</link>
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Jan 2024 21:27:10 -0300</lastBuildDate><atom:link href="https://dev.d11nop5myolkvh.amplifyapp.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Jan 2024 21:27:10 -0300</lastBuildDate><atom:link href="https://blog.altxtech.net/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Deploy to Cloudrun with Terraform and Github Actions</title>
-      <link>https://dev.d11nop5myolkvh.amplifyapp.com/posts/deploy_cloudrun_terraform_gh_actions/</link>
+      <link>https://blog.altxtech.net/posts/deploy_cloudrun_terraform_gh_actions/</link>
       <pubDate>Wed, 17 Jan 2024 21:27:10 -0300</pubDate>
       
-      <guid>https://dev.d11nop5myolkvh.amplifyapp.com/posts/deploy_cloudrun_terraform_gh_actions/</guid>
+      <guid>https://blog.altxtech.net/posts/deploy_cloudrun_terraform_gh_actions/</guid>
       <description>Intro This post is going to be about how to setup a basic CI/CD pipeline for Google Cloud Run, by using Terraform (or OpenTofu) for Infrastructure as Code (IaC), and Github Actions for CI/CD.
 Here are some advantages of deploying Cloud Run apps like this:
 Deploy any supporting cloud resources along with you app Single deployment step (terraform plan &amp;amp; terraform apply) Easy environment replication Keep your Cloud Infrastructure organized Works great for applications composed by multiple Cloud Run services Simplify you CI/CD pipelines First I&amp;rsquo;ll focus just on the Terraform configurations and just deploying the enviroment locally from the command line.</description>
@@ -20,10 +20,10 @@ Deploy any supporting cloud resources along with you app Single deployment step 
     
     <item>
       <title>Developing API data extraction jobs with Go</title>
-      <link>https://dev.d11nop5myolkvh.amplifyapp.com/posts/how_to_develop_an_api_extraction/</link>
+      <link>https://blog.altxtech.net/posts/how_to_develop_an_api_extraction/</link>
       <pubDate>Sat, 19 Aug 2023 00:00:00 -0300</pubDate>
       
-      <guid>https://dev.d11nop5myolkvh.amplifyapp.com/posts/how_to_develop_an_api_extraction/</guid>
+      <guid>https://blog.altxtech.net/posts/how_to_develop_an_api_extraction/</guid>
       <description>Intro In this post I will explain the very minimum necessary to build a production-ready script to extract data from an API with Go.
 This is meant to be an as simple as possible solution that is still pretty resilient and reliable. This guide is ideal if you need to build something quickly and save on engineering hours. Possibly a job that will be run only once.
 We&amp;rsquo;re going to handle API rate limiting, implement a very simple state management system and add some logs for auditing and debugging.</description>
@@ -31,10 +31,10 @@ We&amp;rsquo;re going to handle API rate limiting, implement a very simple state
     
     <item>
       <title>First Post</title>
-      <link>https://dev.d11nop5myolkvh.amplifyapp.com/posts/first-post/</link>
+      <link>https://blog.altxtech.net/posts/first-post/</link>
       <pubDate>Sun, 13 Aug 2023 11:38:16 -0300</pubDate>
       
-      <guid>https://dev.d11nop5myolkvh.amplifyapp.com/posts/first-post/</guid>
+      <guid>https://blog.altxtech.net/posts/first-post/</guid>
       <description>First post.
 Cool stuff coming soon&amp;hellip;</description>
     </item>

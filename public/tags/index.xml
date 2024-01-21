@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on </title>
-    <link>https://dev.d11nop5myolkvh.amplifyapp.com/tags/</link>
+    <link>https://blog.altxtech.net/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Jan 2024 21:27:10 -0300</lastBuildDate><atom:link href="https://dev.d11nop5myolkvh.amplifyapp.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Jan 2024 21:27:10 -0300</lastBuildDate><atom:link href="https://blog.altxtech.net/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cloud</title>
-      <link>https://dev.d11nop5myolkvh.amplifyapp.com/tags/cloud/</link>
+      <link>https://blog.altxtech.net/tags/cloud/</link>
       <pubDate>Wed, 17 Jan 2024 21:27:10 -0300</pubDate>
       
-      <guid>https://dev.d11nop5myolkvh.amplifyapp.com/tags/cloud/</guid>
+      <guid>https://blog.altxtech.net/tags/cloud/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Devops</title>
-      <link>https://dev.d11nop5myolkvh.amplifyapp.com/tags/devops/</link>
+      <link>https://blog.altxtech.net/tags/devops/</link>
       <pubDate>Wed, 17 Jan 2024 21:27:10 -0300</pubDate>
       
-      <guid>https://dev.d11nop5myolkvh.amplifyapp.com/tags/devops/</guid>
+      <guid>https://blog.altxtech.net/tags/devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GCP</title>
-      <link>https://dev.d11nop5myolkvh.amplifyapp.com/tags/gcp/</link>
+      <link>https://blog.altxtech.net/tags/gcp/</link>
       <pubDate>Wed, 17 Jan 2024 21:27:10 -0300</pubDate>
       
-      <guid>https://dev.d11nop5myolkvh.amplifyapp.com/tags/gcp/</guid>
+      <guid>https://blog.altxtech.net/tags/gcp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Github Actions</title>
-      <link>https://dev.d11nop5myolkvh.amplifyapp.com/tags/github-actions/</link>
+      <link>https://blog.altxtech.net/tags/github-actions/</link>
       <pubDate>Wed, 17 Jan 2024 21:27:10 -0300</pubDate>
       
-      <guid>https://dev.d11nop5myolkvh.amplifyapp.com/tags/github-actions/</guid>
+      <guid>https://blog.altxtech.net/tags/github-actions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Guide</title>
-      <link>https://dev.d11nop5myolkvh.amplifyapp.com/tags/guide/</link>
+      <link>https://blog.altxtech.net/tags/guide/</link>
       <pubDate>Wed, 17 Jan 2024 21:27:10 -0300</pubDate>
       
-      <guid>https://dev.d11nop5myolkvh.amplifyapp.com/tags/guide/</guid>
+      <guid>https://blog.altxtech.net/tags/guide/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Terraform</title>
-      <link>https://dev.d11nop5myolkvh.amplifyapp.com/tags/terraform/</link>
+      <link>https://blog.altxtech.net/tags/terraform/</link>
       <pubDate>Wed, 17 Jan 2024 21:27:10 -0300</pubDate>
       
-      <guid>https://dev.d11nop5myolkvh.amplifyapp.com/tags/terraform/</guid>
+      <guid>https://blog.altxtech.net/tags/terraform/</guid>
       <description></description>
     </item>
     
