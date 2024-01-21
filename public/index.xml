@@ -19,6 +19,15 @@ Deploy any supporting cloud resources along with you app Single deployment step 
     </item>
     
     <item>
+      <title>About</title>
+      <link>https://blog.altxtech.net/about/about/</link>
+      <pubDate>Sun, 20 Aug 2023 15:30:53 -0300</pubDate>
+      
+      <guid>https://blog.altxtech.net/about/about/</guid>
+      <description>hey</description>
+    </item>
+    
+    <item>
       <title>Developing API data extraction jobs with Go</title>
       <link>https://blog.altxtech.net/posts/how_to_develop_an_api_extraction/</link>
       <pubDate>Sat, 19 Aug 2023 00:00:00 -0300</pubDate>
