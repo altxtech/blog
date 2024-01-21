@@ -1,4 +1,3 @@
-baseURL = "https://blog.altxtech.net"
 languageCode = "en-us"
 theme = "hemlock"
 paginate = 10
