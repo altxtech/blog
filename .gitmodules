@@ -1,0 +1,3 @@
+[submodule "themes/hemlock"]
+	path = themes/hemlock
+	url = https://github.com/altxtech/hemlock.git
