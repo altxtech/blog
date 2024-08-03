@@ -1,5 +1,5 @@
 *.lock
 .env
-deployment.toml
 public
-
+config
+deploy.sh
