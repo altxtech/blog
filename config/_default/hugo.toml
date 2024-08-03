@@ -1,5 +1,5 @@
 languageCode = "en-us"
-theme = "hemlock"
+theme = "paper"
 paginate = 10
 pluralizelisttitles = false   # removes the automatically appended "s" on sidebar entries
 
@@ -7,3 +7,15 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
 	tag = 'tags' # Will use tags for technologies
 	series = 'series'
 
+[params]
+  # color style
+  color = 'wheat'                           # linen, wheat, gray, light
+
+  # header social icons
+  github = 'YOUR_GITHUB_ID'                 # github.com/YOUR_GITHUB_ID
+  linkedin = 'YOUR_LINKEDIN_ID'             # linkedin.com/in/YOUR_LINKEDIN_ID
+  rss = false                                # show rss icon
+
+  # misc
+  disablePostNavigation = true              # disable post navigation
+  math = true                               # enable KaTeX math typesetting globally
